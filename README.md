@@ -1,2 +1,1 @@
-# jovian-website
-A website for jovian 
+print("Hello mumma")
