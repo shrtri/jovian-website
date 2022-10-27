@@ -7,16 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background: grey;">
+    <style>
+      #banner{
+        height:  360px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 16px;
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-light">
+      
+  <div class="container-fluid fixed-top shadow-sm bg-white">
+    <a class="navbar-brand" href="#">My Leave Plan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <div style="height: 56px;"></div>
+   
+
     <div class="container">
     <h1 class="text-center mt-4 mb-2 mb-4">Plan My Leave</h1>
-      <div class= "text-center">
-    <img class= "img-fluid" id="banner" src="https://images.unsplash.com/photo-1471107191679-f26174d2d41e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnRvb24lMjBzdHVkeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60">
-      </div>
-    <h2 class="text-center mt-2 mb-4">About Plan My Leave</h2>
+      
+    <div>
     <p class="lead" >
       A web protal for getting leave easily from the college, school. Just Select your request type and submit your application within a minute.
     </p>
+    </div>
+      <div class="text-center">
+      <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" >
+      </div>
     <h3 class="text-center mt-2 mb-4">Request Type</h3>
       <div>
         {%for request in request%}
@@ -25,12 +61,13 @@
               <div class= "col-9 ">
               <h4 style="rgb(100,120,100)">
               {{request['title']}}</h4></div></div>
-            <div class="col-3"><button type="button" class="btn btn-outline-info">Open</button></div> 
+            <div class="col-3"><a href="mailto: workt106@gmail.com?
+subject=Leave%20Application%20for%20{{request['title']}}&body=My%20name%3A%20%3Cyour_name%3E%0D%0A%0D%0AMy%20Reason%20of%20leaving%3A%20%3CReason%3E%0D%0A%0D%0ADate%3A%20%3Cdd%2Fmm%2Fyyyy%3E%20to%20%3Cdd%2Fmm%2Fyyyy%3E%0D%0A%0D%0APlace%20Visiting%3A%20%3CPlace_name%3E" type="button" class="btn btn-outline-info">Open</a></div> 
         {% endfor %}
           
         </div>
     <h4>For query:</h4>
-       <p style="margin: 20px;"><b>Email address : workt106@gmail.com</b></p>
+       <a href="mailto: workt106@gmail.com" style="margin: 20px;"><b>Email address : workt106@gmail.com</b></a>
      <div>
       <p class="text-center mt-2 mb-4">Copyright 2022, Plan My Leave</p>
      </div>
